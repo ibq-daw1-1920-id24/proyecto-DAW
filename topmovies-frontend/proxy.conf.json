@@ -1,0 +1,6 @@
+{
+    "/topmovies-api": {
+      "target": "http://localhost",
+      "secure": false
+    }
+}

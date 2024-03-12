@@ -1,0 +1,15 @@
+<!-- <p>{{pelicula?.nombre}}</p>-->
+<mat-card class="pelicula">
+    <mat-card-header>
+      <mat-card-title>{{pelicula?.nombre}}</mat-card-title>
+      <mat-card-subtitle>{{pelicula?.nombre_categoria}}</mat-card-subtitle>
+    </mat-card-header>
+    <img [src]="'/topmovies-api/caratulas/c' + pelicula?.id +'.jpg'" class="caratula" alt="Caratula">
+    <mat-card-content>
+    
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>

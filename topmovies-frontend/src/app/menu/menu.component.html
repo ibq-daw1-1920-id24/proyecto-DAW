@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <span>TopMovies</span>
+    <button mat-button *ngFor="let categoria of categorias" (click)="seleccionarCategoria(categoria)">
+        {{categoria.nombre}}
+    </button>
+    <span class="spacer"></span>
+    <button mat-icon-button>
+        <mat-icon>shopping_cart</mat-icon>
+    </button>
+</mat-toolbar>

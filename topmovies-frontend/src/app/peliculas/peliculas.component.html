@@ -1,0 +1,4 @@
+<p *ngIf="categoria != null">{{categoria.descripcion}}</p>
+<div class="peliculas">
+    <app-pelicula *ngFor="let pelicula of peliculas" [pelicula]="pelicula"/>
+</div>
