@@ -1,10 +1,10 @@
 <mat-toolbar color="primary">
     <span>TopMovies</span>
-    <button mat-button *ngFor="let categoria of categorias" (click)="seleccionarCategoria(categoria)">
+    <button mat-button *ngFor="let categoria of categorias" [routerLink]="['/categoria/', categoria.id]">
         {{categoria.nombre}}
     </button>
     <span class="spacer"></span>
-    <button mat-icon-button>
+    <button mat-icon-button [routerLink]="['/carrito']">
         <mat-icon>shopping_cart</mat-icon>
     </button>
 </mat-toolbar>

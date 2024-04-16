@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { peliculasService } from '../services/peliculas.services';
 import Pelicula from '../modelo/Pelicula';
 import { Categoria } from '../modelo/Categoria';
@@ -16,16 +16,18 @@ export class PeliculasComponent {
 
   constructor(
     private peliculasService: peliculasService,
-    private categoriasService: CategoriasService) {}
+    private categoriasService: CategoriasService,
+    private route: ActivatedRoute) {}
 
   ngOnInit() {
 
-    this.categoriasService.categoriaSeleccionada.subscribe(c => {
-      this.categoria = c;
-      if (c != null)
-        this.peliculasService.cargarpeliculas(c!.id);
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      const idCat = params.get('idCat');
+      if (idCat)
+        this.peliculasService.cargarpeliculas(parseInt(idCat));
       else
         this.peliculasService.borrarpeliculas();
+      this.peliculasService.
     });
 
     this.peliculasService.peliculas.subscribe((peliculas) => this.peliculas = peliculas)
