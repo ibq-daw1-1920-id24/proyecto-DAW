@@ -27,7 +27,6 @@ export class PeliculasComponent {
         this.peliculasService.cargarpeliculas(parseInt(idCat));
       else
         this.peliculasService.borrarpeliculas();
-      this.peliculasService.
     });
 
     this.peliculasService.peliculas.subscribe((peliculas) => this.peliculas = peliculas)
