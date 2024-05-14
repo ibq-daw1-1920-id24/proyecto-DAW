@@ -1,22 +1,22 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ItemCarrito } from '../modelo/ItemCarrito';
 import Pelicula from '../modelo/Pelicula';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarritoService {
 
-    public items: ItemCarrito[]=[]
+  public items = new BehaviorSubject<ItemCarrito[]>([]);
     
   constructor() { }
 
-    public AñadirPelicula(pelicula:Pelicula) {
-        this.items.push({pelicula:pelicula.nombre, imagen:'/topmovies-api/caratulas/c' + pelicula?.id +'.jpg', precio:pelicula.precio})
+    public AnadirPelicula(pelicula:Pelicula) {
+        this.items.next([...this.items.value,{pelicula:pelicula.nombre, imagen:'/topmovies-api/caratulas/c' + pelicula?.id +'.jpg', precio:pelicula.precio, id:pelicula.id}]);
     }
 
-    public BorrarPelicula() {
-
+    public BorrarPelicula(id:number) {
+      this.items.next(this.items.value.filter(item => item.id !=id));
     }
 }

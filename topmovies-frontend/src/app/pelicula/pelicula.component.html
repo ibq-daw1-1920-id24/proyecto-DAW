@@ -9,6 +9,7 @@
     
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>LIKE</button>
+      <button mat-button (click)="AnadirCarrito()">Añadir a carrito</button>
+      <span>{{pelicula?.precio}}$</span>
     </mat-card-actions>
   </mat-card>
