@@ -3,7 +3,6 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { peliculasService } from '../services/peliculas.services';
 import Pelicula from '../modelo/Pelicula';
 import { Categoria } from '../modelo/Categoria';
-import { CategoriasService } from '../services/categorias.services';
 
 @Component({
   selector: 'app-peliculas',
@@ -16,8 +15,8 @@ export class PeliculasComponent {
 
   constructor(
     private peliculasService: peliculasService,
-    private categoriasService: CategoriasService,
-    private route: ActivatedRoute) {}
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
 

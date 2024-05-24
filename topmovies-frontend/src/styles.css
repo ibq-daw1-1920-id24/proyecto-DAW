@@ -23,3 +23,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     flex-wrap: wrap;
     padding: 40px;
 }
+
+.carrito.contenedor {
+    max-width: 600px;
+}

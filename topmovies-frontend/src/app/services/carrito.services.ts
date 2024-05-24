@@ -13,7 +13,9 @@ export class CarritoService {
   constructor() { }
 
     public AnadirPelicula(pelicula:Pelicula) {
+      if (this.items.value.every(item => item.id != pelicula.id)) {
         this.items.next([...this.items.value,{pelicula:pelicula.nombre, imagen:'/topmovies-api/caratulas/c' + pelicula?.id +'.jpg', precio:pelicula.precio, id:pelicula.id}]);
+      }
     }
 
     public BorrarPelicula(id:number) {
