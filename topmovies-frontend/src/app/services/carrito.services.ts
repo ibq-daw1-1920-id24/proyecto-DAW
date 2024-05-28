@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 export class CarritoService {
 
   public items = new BehaviorSubject<ItemCarrito[]>([]);
-    
+  
   constructor() { }
 
     public AnadirPelicula(pelicula:Pelicula) {
