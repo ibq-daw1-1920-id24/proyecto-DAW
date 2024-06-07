@@ -8,13 +8,15 @@ import { PeliculaComponent } from './pelicula/pelicula.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatTableModule} from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 import { CarritoComponent } from './carrito/carrito.component';
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatBadgeModule} from '@angular/material/badge';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatButtonModule,
     MatCardModule,
     MatTableModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

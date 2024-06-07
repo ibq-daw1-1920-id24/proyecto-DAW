@@ -1,1 +1,17 @@
-<p>Hola</p>
+<form #registroForm="ngForm" (ngSubmit)="registrarse(registroForm)">
+ 
+  <mat-form-field>
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Nombre de usuario" name="id" [(ngModel)]="id">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Contraseña</mat-label>
+    <input matInput placeholder="Nombre de usuario" name="clave" [(ngModel)]="clave">
+  </mat-form-field>
+   
+    <p>
+      <button type="submit"  mat-flat-button color="primary">registrarse</button>
+    </p>
+    
+  </form>
