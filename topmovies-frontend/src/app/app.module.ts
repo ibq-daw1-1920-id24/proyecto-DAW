@@ -17,6 +17,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { MatBadgeModule} from '@angular/material/badge';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatInputModule} from '@angular/material/input';
     PeliculasComponent,
     PeliculaComponent,
     InicioComponent,
-    CarritoComponent
+    CarritoComponent,
+    PaginaPrincipalComponent
   ],
   imports: [
     BrowserModule,
