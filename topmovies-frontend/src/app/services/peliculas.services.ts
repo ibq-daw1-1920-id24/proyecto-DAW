@@ -21,12 +21,12 @@ export class peliculasService {
 
   public cargarMasVistas() {
     const peticion = this.httpClient.get<pelicula[]>('/topmovies-api/peliculas_mas_vistas.php');
-    peticion.subscribe(resultado => this.peliculas.next(resultado));
+    peticion.subscribe(resultado => this.peliculas_mas_vistas.next(resultado));
   }
 
   public cargarMasGalardonadas() {
     const peticion = this.httpClient.get<pelicula[]>('/topmovies-api/peliculas_mas_galardonadas.php');
-    peticion.subscribe(resultado => this.peliculas.next(resultado));
+    peticion.subscribe(resultado => this.peliculas_mas_galardonadas.next(resultado));
   }
 
   public borrarpeliculas() {

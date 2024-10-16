@@ -1,3 +1,9 @@
-<p>pagina-principal works!</p>
 <h1>Las mas galardonadas</h1>
+<div class="peliculas">
+    <app-pelicula *ngFor="let pelicula of galardonadas" [pelicula]="pelicula"/>
+</div>
+
 <h1>Las mas vistas</h1>
+<div class="peliculas">
+    <app-pelicula *ngFor="let pelicula of vistas" [pelicula]="pelicula"/>
+</div>
