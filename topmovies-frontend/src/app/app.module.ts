@@ -18,6 +18,7 @@ import { MatBadgeModule} from '@angular/material/badge';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
     PeliculaComponent,
     InicioComponent,
     CarritoComponent,
-    PaginaPrincipalComponent
+    PaginaPrincipalComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

@@ -4,11 +4,11 @@
         {{categoria.nombre}}
     </button>
     <span class="spacer"></span>
-    <button *ngIf="!autenticado" mat-icon-button>
-        <mat-icon matBadgeColor="warn">Account Circle</mat-icon>
+    <button *ngIf="!autenticado" mat-icon-button [routerLink]="['/inicio']">
+        <mat-icon matBadgeColor="warn">account_circle</mat-icon>
     </button>
-    <button *ngIf="autenticado" mat-icon-button>
-        <mat-icon matBadgeColor="warn">Manage Accounts</mat-icon>
+    <button *ngIf="!autenticado" mat-icon-button [routerLink]="['/registro']">
+        <mat-icon matBadgeColor="warn">manage_accounts</mat-icon>
     </button>
     <button mat-icon-button [routerLink]="['/carrito']">
         <mat-icon [matBadge]="tamanioCarrito" matBadgeColor="warn">shopping_cart</mat-icon>

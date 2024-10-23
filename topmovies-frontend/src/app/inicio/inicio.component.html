@@ -1,35 +1,17 @@
-<form #registroForm="ngForm" (ngSubmit)="registrarse(registroForm)">
- 
+<form #loginForm="ngForm" (ngSubmit)="(iniciarSesion())">
+
   <mat-form-field>
     <mat-label>Id</mat-label>
-    <input matInput placeholder="Nombre de usuario" name="id" [(ngModel)]="id">
+    <input matInput placeholder="Nombre de usuario" name="id" [(ngModel)]="idLogin">
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Contraseña</mat-label>
-    <input matInput placeholder="introduce la contraseña" name="clave" [(ngModel)]="clave">
+    <input matInput placeholder="introduce la contraseña" name="clave" [(ngModel)]="claveLogin">
   </mat-form-field>
-   
+
     <p>
-      <button type="submit"  mat-flat-button color="primary">registrarse</button>
+      <button type="submit" mat-flat-button color="primary">Iniciar sesion</button>
     </p>
     
   </form>
-
-  <form *ngIf="!autenticado" #loginForm="ngForm" (ngSubmit)="(iniciarSesion())">
- 
-    <mat-form-field>
-      <mat-label>Id</mat-label>
-      <input matInput placeholder="Nombre de usuario" name="id" [(ngModel)]="idLogin">
-    </mat-form-field>
-  
-    <mat-form-field>
-      <mat-label>Contraseña</mat-label>
-      <input matInput placeholder="introduce la contraseña" name="clave" [(ngModel)]="claveLogin">
-    </mat-form-field>
-  
-      <p>
-        <button type="submit" mat-flat-button color="primary">Iniciar sesion</button>
-      </p>
-      
-    </form>
