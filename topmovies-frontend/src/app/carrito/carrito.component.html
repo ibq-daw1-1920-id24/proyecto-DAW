@@ -4,26 +4,30 @@
     <ng-container matColumnDef="Pelicula">
       <th mat-header-cell *matHeaderCellDef> Pelicula </th>
       <td mat-cell *matCellDef="let element"> {{element.pelicula}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
     </ng-container>
   
     <ng-container matColumnDef="Imagen">
       <th mat-header-cell *matHeaderCellDef> Imagen </th>
       <td mat-cell *matCellDef="let element"><img [src]="element.imagen"></td>
+      <td mat-footer-cell *matFooterCellDef><strong>TOTAL</strong></td>
     </ng-container>
   
     <ng-container matColumnDef="Precio">
       <th mat-header-cell *matHeaderCellDef> Precio </th>
       <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+      <td mat-footer-cell *matFooterCellDef> {{total}} </td>
     </ng-container>
   
     <ng-container matColumnDef="Eliminar">
       <th mat-header-cell *matHeaderCellDef> Eliminar </th>
-      <td mat-cell *matCellDef="let element"><button mat-button (click)="BorrarPelicula(element.id)">Eliminar</button>
-      </td>
+      <td mat-cell *matCellDef="let element"><button mat-button (click)="BorrarPelicula(element.id)">Eliminar</button></td>
+      <td mat-footer-cell *matFooterCellDef><button mat-button (click)="comprar()">Comprar</button></td>
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
   </table>
 
 </div>

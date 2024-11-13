@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 import { RegistroComponent } from './registro/registro.component';
+import { CompradasComponent } from './compradas/compradas.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RegistroComponent } from './registro/registro.component';
     InicioComponent,
     CarritoComponent,
     PaginaPrincipalComponent,
-    RegistroComponent
+    RegistroComponent,
+    CompradasComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@ session_start();
 header('content-type: application/json');
 
 try {
-
+    
     $usuario = json_decode(file_get_contents('php://input'), true);
 
     $dsn = 'mysql:host=localhost;dbname=peliculas';
