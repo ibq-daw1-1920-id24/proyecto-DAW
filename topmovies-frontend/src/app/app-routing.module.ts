@@ -5,6 +5,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 import { RegistroComponent } from './registro/registro.component';
+import { CompradasComponent } from './compradas/compradas.component';
 
 const routes: Routes = [{
   path: 'inicio',
@@ -25,6 +26,10 @@ const routes: Routes = [{
 {
   path: 'categoria/:idCat',
   component: PeliculasComponent
+},
+{
+  path: 'compradas',
+  component: CompradasComponent
 }];
 
 @NgModule({

@@ -32,4 +32,9 @@ export class peliculasService {
   public borrarpeliculas() {
     this.peliculas.next([]);
   }
+
+  public cargarCompradas() {
+    const peticion = this.httpClient.get<pelicula[]>('/topmovies-api/peliculas_compradas.php');
+    peticion.subscribe(resultado => this.peliculas_mas_vistas.next(resultado));
+  }
 }
