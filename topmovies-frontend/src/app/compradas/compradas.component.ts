@@ -11,11 +11,12 @@ export class CompradasComponent {
   public compradas: Pelicula[]=[];
 
   constructor(
-    private peliculasService: peliculasService,
+    private peliculasService: peliculasService
   ) {}
   
   ngOnInit() {
+    this.peliculasService.borrarpeliculas();
     this.peliculasService.cargarCompradas();
-   // this.peliculasService.peliculas.subscribe((peliculas) => this.peliculas = peliculas)
+    this.peliculasService.peliculas.subscribe((peliculas) => this.compradas = peliculas)
   }
 }
