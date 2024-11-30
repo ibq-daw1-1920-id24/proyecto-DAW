@@ -16,7 +16,7 @@ export class CompradasComponent {
   
   ngOnInit() {
     this.peliculasService.borrarpeliculas();
-    this.peliculasService.cargarCompradas();
     this.peliculasService.peliculas.subscribe((peliculas) => this.compradas = peliculas)
+    this.peliculasService.cargarCompradas();
   }
 }

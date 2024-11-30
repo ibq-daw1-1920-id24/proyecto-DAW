@@ -4,4 +4,5 @@ export default interface Pelicula {
     precio: number;
     id_categoria: number;
     nombre_categoria: string;
+    comprada: boolean;
 }

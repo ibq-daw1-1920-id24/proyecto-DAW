@@ -35,6 +35,6 @@ export class peliculasService {
 
   public cargarCompradas() {
     const peticion = this.httpClient.get<pelicula[]>('/topmovies-api/peliculas_compradas.php');
-    peticion.subscribe(resultado => this.peliculas_mas_vistas.next(resultado));
+    peticion.subscribe(resultado => this.peliculas.next(resultado));
   }
 }
