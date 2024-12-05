@@ -10,7 +10,7 @@
     </mat-card-content>
     <mat-card-actions>
       <button *ngIf="!pelicula?.comprada" mat-button (click)="AnadirCarrito()">Añadir a carrito</button>
-      <button *ngIf="pelicula?.comprada" mat-button (click)="AnadirCarrito()">Ver</button>
+      <button *ngIf="pelicula?.comprada" mat-button [routerLink]="['/ver', pelicula?.video]">Ver</button>
       <span *ngIf="!pelicula?.comprada">{{pelicula?.precio}}$</span>
     </mat-card-actions>
   </mat-card>

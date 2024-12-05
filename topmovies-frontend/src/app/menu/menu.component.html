@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="visible">
     <button mat-button class="title" [routerLink]="['/']">TopMovies</button>
     <button mat-button *ngFor="let categoria of categorias" [routerLink]="['/categoria/', categoria.id]">
         {{categoria.nombre}}

@@ -20,6 +20,7 @@ import {MatInputModule} from '@angular/material/input';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CompradasComponent } from './compradas/compradas.component';
+import { VerComponent } from './ver/ver.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CompradasComponent } from './compradas/compradas.component';
     CarritoComponent,
     PaginaPrincipalComponent,
     RegistroComponent,
-    CompradasComponent
+    CompradasComponent,
+    VerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,4 @@
+<video *ngIf="codigo != null" autoplay>
+    <source [src]="'/topmovies-api/videos/' + codigo +'.mp4'"/>
+    <p>Formato de video no soportado</p>
+</video>
